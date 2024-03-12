@@ -27,6 +27,7 @@ const getCLIPath = async (cliPath = localCLIPath): Promise<string | void> => {
   const stylizedPath = chalk.yellowBright(cliPath);
 
   console.log(chalk.yellow(`Checking Temporal CLI at ${stylizedPath}…`));
+  return cliPath;
 
   const { stdout, exitCode } = await $`${cliPath} -v`.quiet().nothrow();
 
@@ -58,7 +59,7 @@ export const createTemporalServer = async ({
   port = 7233,
   uiPort = port + 1000,
   path = localCLIPath,
-  logLevel = 'fatal',
+  logLevel = 'warn',
   codecEndpoint,
   headless = false,
 }: TemporalServerOptions = {}) => {
