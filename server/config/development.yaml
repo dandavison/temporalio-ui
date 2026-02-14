@@ -44,8 +44,8 @@ auth:
         invitation:
 tls:
   caFile:
-  certFile:
-  keyFile:
+  certFile: /Users/dan/src/temporal-all/.git/modules/repos/saas-temporal/wormhole/worktrees/technical-field-enablement-session/saas-temporal/.task/cloudenv/client.pem
+  keyFile: /Users/dan/src/temporal-all/.git/modules/repos/saas-temporal/wormhole/worktrees/technical-field-enablement-session/saas-temporal/.task/cloudenv/client.key
   caData:
   certData:
   keyData:
